@@ -1,0 +1,43 @@
+.tenjiButuri {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    position: relative;
+}
+
+.product {
+    margin: 10px auto;
+}
+
+.product h2 {
+    color: #000;
+}
+
+.tagSelect {
+    display: flex;
+    position: sticky;
+    top: 5px;
+    z-index: 80;
+}
+
+.tag {
+    margin: 0px 3px;
+}
+
+.tag p {
+    font-size: 10px;
+}
+
+.tag .false {
+    color: #222;
+    background-color: #ddd;
+}
+
+.tag p {
+    padding: 0px 10px;
+    border: 1px solid #222;
+    border-radius: 15px;
+    background-color: #222;
+    color: #ddd;
+}

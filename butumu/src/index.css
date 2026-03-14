@@ -1,0 +1,62 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #000;
+  background-color: #ddd;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  margin: 0;
+  touch-action: pan-y;
+}
+@font-face {
+  font-family: katyouhuugetsu;
+  src: url('/src/assets/花鳥風月.ttf');
+}
+
+@font-face {
+  font-family: meityou;
+  src: url('/src/assets/ShipporiMincho-Regular.ttf');
+}
+
+@font-face {
+  font-family: light;
+  src: url('/src/assets/IBMPlexSansJP-Light.ttf');
+}
+
+@font-face {
+  font-family: dela;
+  src: url('/src/assets/DelaGothicOne-Regular.ttf');
+}
+
+@font-face {
+  font-family: league;
+  src: url('/src/assets/LeagueGothic-Regular-VariableFont_wdth.ttf');
+}
+
+h1 {
+  font-size: 5em;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 24px;
+  color: #fff;
+  font-weight: 100;
+  font-family: meityou;
+  margin: 30px 0px;
+}
+
+p {
+  font-weight: 100;
+  font-size: 11px;
+  font-family: light;
+  white-space: pre-wrap;
+  line-height: 2.3;
+}

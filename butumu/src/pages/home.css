@@ -1,0 +1,329 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.image {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+}
+
+.image img {
+    height: 100vh;
+    width: 120%;
+    object-fit: cover;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    z-index: 20;
+}
+
+.left {
+    top: 50px;
+    right:80px;
+    padding: 0px;
+    position: fixed;
+    font-weight: 300;
+    margin: 0px;
+    z-index: 60;
+}
+
+.right {
+    top: 50px;
+    right: 40px;
+    padding: 0px;
+    position: fixed;
+    font-weight: 300;
+    margin: 0px;
+    z-index: 60;
+}
+
+.title {
+    position: fixed;
+    text-align: right;
+    z-index: 60;
+    bottom: 140px;
+    right: 20px;
+    font-size: 40px;
+    font-family: league;
+    margin: 0;
+    -webkit-text-stroke: 0.6px #000;
+}
+
+.explain {
+    position: fixed;
+    text-align: right;
+    z-index: 60;
+    bottom: 110px;
+    right: 20px;
+    font-size: 20px;
+    margin: 0%;
+    color: #FFF;
+    font-family: league;
+    -webkit-text-stroke: 0.4px #000;
+}
+
+.hide:not(img) {
+    opacity: 0;
+}
+
+.open {
+    opacity: 1;
+}
+
+.nativebar {
+    height: 2px;
+    width: 80vw;
+    left: 10vw;
+    position: fixed;
+    bottom: 100px;
+    background-color: rgba(255,255,255,0.3);
+    z-index: 55;
+}
+
+.bar {
+    height: 2px;
+    width: 0vw;
+    left: 10vw;
+    position: fixed;
+    bottom: 100px;
+    background-color: rgba(255,255,255,1);
+    z-index: 56;
+}
+
+.open .bar {
+    animation: barAnimation 5s ease 0s forwards;
+}
+
+@keyframes barAnimation {
+    from {width: 0vw;}
+    to {width: 80vw;}
+}
+
+.main {
+    width: 100%;
+    min-height: 200vh;
+    position: absolute;
+    top: 100vh;
+    background-color: #ddd;
+    z-index: 65;
+    border-radius: 30px 30px 0px 0px;
+}
+
+.MainGrid {
+    display: grid;
+    grid-template-columns: [left] 60px [main] auto [sub] 40px [mainEnd] 20px [right];
+    grid-template-rows: [top] 80px [camera] 100px [title0] auto [txt0] auto [off0] 80px [main] auto [txt1] auto [intxt] 10px [txt2] auto [off1] 80px [tenji] auto [end];
+}
+
+.camera {
+    grid-column-start: main;
+    grid-column-end: sub;
+    grid-row-start: camera;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.cameraMain {
+    grid-column-start: main;
+    grid-column-end: sub;
+    grid-row-start: title0;
+    color: black;
+    text-align: center;
+    font-size: 22px;
+}
+
+.cameraTxt {
+    grid-column-start: main;
+    grid-column-end: sub;
+    grid-row-start: txt0;
+    text-align: center;
+    word-break: keep-all;
+}
+
+.inMain {
+    grid-column-start: main;
+    grid-column-end: sub;
+    grid-row-start: main;
+    color: black;
+    font-size: 22px;
+    word-break: keep-all;
+    text-align: center;
+}
+
+.txt1 {
+    grid-column-start: main;
+    grid-column-end: sub;
+    grid-row-start: txt1;
+    margin: 0;
+    word-break: keep-all;
+}
+
+.txt2 {
+    grid-column-start: main;
+    grid-column-end: sub;
+    grid-row-start: txt2;
+    margin: 0;
+    word-break: keep-all;
+}
+
+.tenji {
+    grid-column-start: left;
+    grid-column-end: right;
+    grid-row-start: tenji;
+
+    display: grid;
+    grid-template-columns: [Tleft] 60px [Tmain] auto [Tright];
+    grid-template-rows: [Ttop] 0px [Ttitle] auto [Timage1] auto [Timage2] auto [Toff] 80px [Tend] auto [Tbottom];
+
+    background-color: #ddd;
+    width: 100vw;
+}
+
+.tenjiView {
+    grid-column-start: Tmain;
+    grid-column-end: Tright;
+    grid-row-start: Ttitle;
+    color: black;
+    font-size: 22px;
+}
+
+.block {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: [Bleft] auto [Boff0] min(5vw,5vh) [Bimage] min(5vw,5vh) [Bmain] min(80vw,80vh) [Bend] min(5vw,5vh) [BimgEnd] min(5vw,5vh) [Boff1] auto [Bright];
+    grid-template-rows: [Btop] 20px [Bmain] min(90vw,90vh) [Btxt] auto [Bbottom];
+}
+
+#block1 {
+    grid-column: Tleft / Tright;
+    grid-row: Timage1 / Timage2;
+}
+
+.butudai {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    grid-column: Bimage / BimgEnd;
+    grid-row: Bmain / Btxt;
+    filter: grayscale(100%);
+}
+
+.classname1 {
+    grid-column: Bimage /BimgEnd;
+    grid-row-end: Btxt;
+    z-index: 80;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+}
+
+.class1 {
+    margin: 0px;
+    font-size: 24px;
+    color: black;
+}
+
+.tapToGo {
+    background-color: #000;
+    padding: 0px 14px;
+    margin: 12px 10px;
+    color: #ddd;
+    font-size: 11px;
+}
+
+.jump1 {
+    position: relative;
+    top: 4px;
+}
+
+.txt3 {
+    grid-column-start: Bmain;
+    grid-column-end: Bend;
+    grid-row-start: Btxt;
+    margin: 20px 10px;
+}
+
+#block2 {
+    grid-column: Tleft / Tright;
+    grid-row: Timage2 / Toff;
+}
+
+.class {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    grid-column: Bimage / BimgEnd;
+    grid-row: Bmain / Btxt;
+    filter: grayscale(100%);
+}
+
+.classname2 {
+    grid-column: Bimage /BimgEnd;
+    grid-row-end: Btxt;
+    z-index: 80;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+}
+
+.class2 {
+    margin: 0px;
+    font-size: 24px;
+    color: black;
+}
+
+.txt4 {
+    grid-column-start: Bmain;
+    grid-column-end: Bend;
+    grid-row-start: Btxt;
+    margin: 20px 10px;
+}
+
+.endroll {
+    grid-column: Tleft / Tright;
+    grid-row: Tend / Tbottom;
+    background-color: #202020;
+    display: grid;
+    grid-template-rows: [Etop] auto [Edev] auto [Eend];
+}
+
+.xlink {
+    display: flex;
+    grid-row-start: Etop;
+}
+
+.xIcon {
+    margin: 20px;
+}
+
+.x {
+    color: #ddd;
+    font-size: 12px;
+    margin: 23px 0px;
+}
+
+.jump {
+    margin: 28px 5px;
+}
+
+.txt5 {
+    color: #ddd;
+    grid-row-start: Edev;
+    margin: 0px 20px;
+}
+
+.endTitle {
+    grid-row-start: Edev;
+    margin: 0px 20px;
+    text-align: right;
+    word-break: keep-all;
+}
+
+span {
+    font-size: 50px;
+}
+
+
