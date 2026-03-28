@@ -16,7 +16,7 @@ function App() {
       <HashRouter>
         <ScrollToTop />
         <Sidetab />
-        <Routes location={location} key={location.pathname}>
+        <Routes>
           <Route path={ROUTES.HOME} element={<Home />} />
           <Route path={ROUTES.BUTURI} element={<Tenji />} />
           <Route path={ROUTES.CLASS} element={<Class/>} />

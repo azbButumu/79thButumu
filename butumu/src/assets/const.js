@@ -1,7 +1,7 @@
 export const ROUTES = {
     HOME: "/",
-    CLASS: "/experience",
-    BUTURI: "/display",
+    CLASS: "/Room302",
+    BUTURI: "/Room301",
     BUTUMU: "/butumu",
     KATUDOU: "/katsudou",
 }

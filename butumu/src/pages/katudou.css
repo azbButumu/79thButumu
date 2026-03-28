@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     flex-direction: column;
     align-content: center;
+    height: 200vh;
 }
 
 .activity {

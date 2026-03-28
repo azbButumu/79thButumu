@@ -15,10 +15,6 @@
   margin: 0;
   touch-action: pan-y;
 }
-@font-face {
-  font-family: katyouhuugetsu;
-  src: url('/src/assets/花鳥風月.ttf');
-}
 
 @font-face {
   font-family: meityou;
@@ -56,7 +52,11 @@ h2 {
 p {
   font-weight: 100;
   font-size: 11px;
-  font-family: light;
   white-space: pre-wrap;
   line-height: 2.3;
+  font-family: light;
+}
+
+li {
+  list-style: none;
 }

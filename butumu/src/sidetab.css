@@ -1,81 +1,97 @@
-ul {
+.menu {
+  z-index: 100;
   position: fixed;
-  bottom: 0px;
+  top: 0px;
+  right: 0px;
+}
+
+.menu > div {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  width: 70px;
+  height: 62px;
+  background-color: #e1cc0e;
+  border-bottom-left-radius: 10px;
+  border-left: #000 1px solid;
+  border-bottom: #000 1px solid;
+}
+
+.tapbar {
+  width: 30px;
+  height: 2px;
+  background-color: #000;
+  position: relative;
   right: 20px;
-  background-color: #282828;
-  padding: 10px 25px 0px;
-  margin: 0;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  overflow-y: hidden;
-  height: 78px;
-  transition-duration: 0.5s;
-  z-index: 80;
 }
 
-.active{
-  height: 350px;
-  transition-duration: 0.5s;
+#bar1 {
+  top: 20px;
+  transition-duration: 0.3s;
+  position: absolute;
 }
 
-li{
-  list-style: none;
-}
-
-.tab h2{
-  width: 170px;
-  margin: 0%;
-  padding-top: 25px;
-  padding-bottom: 25px;
-}
-
-.top{
-  border-top: solid 2px;
-  border-color: #e1cc0e;
-  position: fixed;
-  bottom: 0px;
-  right: 45px;
-  background-color: #282828;
-  z-index: 90;
-}
-
-.tab h2:not(.nothing,.top){
-  border-top: solid;
-  border-color: #555;
-}
-
-.icon1 {
-  border-top: solid 1px #fff;
-  width: 20px;
-  height: 0px;
-  position: fixed;
-  bottom: 50px;
-  right: 70px;
-  z-index: 100; 
-  transition-duration: 0.5s;
-}
-
-.icon2 {
-  border-bottom: solid 1px #fff;
-  width: 20px;
-  height: 0px;
-  position: fixed;
-  bottom: 36px;
-  right: 70px;
-  z-index: 100; 
-  transition-duration: 0.5s;
-}
-
-#ActiveIcon1 {
-  bottom: 43px;
+.close #bar1 {
+  top: 30px;
   transform: rotate(45deg);
+  transition-duration: 0.3s;
+}
+
+#bar2 {
+  top: 30px;
+  transition-duration: 0.3s;
+  position: absolute;
+}
+
+.close #bar2 {
+  opacity: 0;
+  transition-duration: 0.3s;
+}
+
+#bar3 {
+  top: 40px;
+  transition-duration: 0.3s;
+  position: absolute;
+}
+
+.close #bar3 {
+  top: 30px;
+  transform: rotate(135deg);
+  transition-duration: 0.3s;
+}
+
+.menu ul {
+  width: 0px;
+  height: 100vh;
+  margin: 0px;
+  overflow-x: hidden;
+  padding-inline-start: 0px;
+  transition-duration: 0.5s;
+  background-color: #fff;
+}
+
+.menu .active {
+  width: 100vw;
   transition-duration: 0.5s;
 }
 
-#ActiveIcon2 { 
-  bottom: 43px;
-  transform: rotate(135deg);
-  transition-duration: 0.5s;
+.menu ul li:first-child {
+  margin-top: 70px;
+}
+
+.menu ul li{
+  margin-left: 30px;
+  white-space: nowrap;
+}
+
+.menu h3 {
+  font-family: "league";
+  font-size: 30px;
+  margin: 0px;
+}
+
+.menu p {
+  white-space: nowrap;
 }
 
 h1#title {
@@ -106,8 +122,4 @@ h1#title.small {
   transition-duration: 0.5s;
   -webkit-text-stroke: 1px #000;
   letter-spacing: -10px;
-}
-
-#hide {
-  opacity: 0;
 }
