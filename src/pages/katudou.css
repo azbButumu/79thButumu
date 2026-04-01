@@ -1,0 +1,15 @@
+.katudou {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    height: 200vh;
+}
+
+.activity {
+    margin: 10px auto;
+}
+
+.activity h2 {
+    color: #000;
+}

@@ -1,0 +1,512 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.image {
+    width: 100%;
+    height: 200vh;
+    position: fixed;
+}
+
+.image img {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    z-index: 20;
+}
+
+
+.title {
+    position: fixed;
+    text-align: right;
+    z-index: 60;
+    bottom: 90px;
+    right: 20px;
+    font-size: 40px;
+    font-family: league;
+    margin: 0;
+    -webkit-text-stroke: 0.6px #000;
+}
+
+.explain {
+    position: fixed;
+    text-align: right;
+    z-index: 60;
+    bottom: 60px;
+    right: 20px;
+    font-size: 20px;
+    margin: 0%;
+    color: #FFF;
+    font-family: league;
+    -webkit-text-stroke: 0.4px #000;
+}
+
+.hide img {
+    height: 0px;
+}
+
+.hide:not(img) {
+    opacity: 0;
+}
+
+.open {
+    opacity: 1;
+}
+
+.nativebar {
+    height: 2px;
+    width: 80vw;
+    left: 10vw;
+    position: fixed;
+    bottom: 50px;
+    background-color: rgba(255,255,255,0.3);
+    z-index: 55;
+}
+
+.bar {
+    height: 2px;
+    width: 0vw;
+    left: 10vw;
+    position: fixed;
+    bottom: 50px;
+    background-color: rgba(255,255,255,1);
+    z-index: 56;
+}
+
+.open .bar {
+    animation: barAnimation 5s ease 0s forwards;
+}
+
+@keyframes barAnimation {
+    from {width: 0vw;}
+    to {width: 80vw;}
+}
+
+main {
+    width: 100%;
+    position: absolute;
+    top: 100vh;
+    overflow-x: hidden;
+    overscroll-behavior-x: contain;
+    background-color: #ddd;
+    border-radius: 30px 30px 0px 0px;
+    z-index: 65;
+}
+
+.MainFlex {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100vmin;
+    margin: 0px auto;
+}
+
+aside {
+    margin: 30px 0px;
+    width: 100vmin;
+    overflow: visible;
+}
+
+aside .proList {
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none; 
+}
+
+aside ul {
+    display: inline-flex;
+    gap: 20px;
+    padding-inline-start: 0px;
+    padding: 30px;
+}
+
+aside li{
+    width: 40vmin;
+    flex-shrink: 0;
+    padding: 3vmin;
+    background-color: #f0f0f0;
+    box-shadow: 0px 3px 10px 1px #777;
+    position: relative;
+}
+
+aside li img {
+    width: 40vmin;
+    height: 40vmin;
+    object-fit: cover;
+}
+
+aside div p {
+    text-align: center;
+    word-break: keep-all;
+}
+
+aside li h3 {
+    font-family: "league";
+    color: #e1cc0e;
+    -webkit-text-stroke: 0.8px #000;
+    font-size: 50px;
+    position: absolute;
+    bottom: 0px;
+    margin: 0px;
+
+}
+
+aside .proTxt {
+    width: 70vmin;
+    margin: 0px auto;
+}
+
+.MainFlex nav {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.MainFlex nav h2 {
+    margin: 50px 0px 0px;
+    color: #000;
+}
+
+.shiiru {
+    width: 40vmin;
+    position: relative;
+    top: 40px;
+}
+
+.block {
+    width: 80vmin;
+    padding: 3vmin;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #f0f0f0;
+    box-shadow: 0px 3px 10px 1px #777;
+}
+
+.block img {
+    width: 80vmin;
+    height: 80vmin;
+    object-fit: cover;
+}
+
+.MainFlex .block h2 {
+    color: #000;
+    margin: 10px 0px;
+    flex-grow: 10000;
+}
+
+.block div {
+    transform: translateY(40px);
+}
+
+.block .tapToGo {
+    width: 85px;
+    background: linear-gradient(transparent 30%,#e1cc0e 30%,#e1cc0e 80%,transparent 80%);
+}
+
+.jump1 {
+    transform: translateY(3px);
+}
+
+.block span {
+    font-size: 50px;
+    font-family: "league";
+    color: #e1cc0e;
+    letter-spacing: 1px;
+    -webkit-text-stroke: 0.8px #000;
+}
+
+.sale {
+    position: relative;
+    height: 240vmin;
+    width: 100vmin;
+    margin: 40px 0px;
+}
+
+.sale #imgDiv1 {
+    background-color: #f0f0f0;
+    width: 90vmin;
+    height: 118vmin;
+    box-shadow: 0px 3px 10px 1px #777;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 0px auto;
+    transform: rotate(-3deg);
+    left: 5vmin;
+}
+
+.sale #imgDiv1 img {
+    margin: 3vmin;
+    width: 84vmin;
+    height: 112vmin;
+    object-fit: cover;
+}
+
+.sale #imgDiv2 {
+    background-color: #f0f0f0;
+    width: 90vmin;
+    height: 118vmin;
+    box-shadow: 0px 3px 10px 1px #777;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 0px auto;
+    transform: rotate(3deg);
+    left: 5vmin;
+}
+
+.sale #imgDiv2 img {
+    margin: 3vmin;
+    width: 84vmin;
+    height: 112vmin;
+    object-fit: cover;
+}
+
+.act1 #imgDiv1 {
+    animation: left1 1.5s ease 0s 1 normal none running;
+}
+
+.act1 #imgDiv2 {
+    animation: right2 1.5s ease 0s 1 normal none running;
+}
+
+.act2 #imgDiv1 {
+    animation: right1 1.5s ease 0s 1 normal none running;
+}
+
+.act2 #imgDiv2 {
+    animation: left2 1.5s ease 0s 1 normal none running;
+}
+
+.z76 {
+    z-index: 76;
+}
+
+.z75 {
+    z-index: 75;
+}
+
+@keyframes left1 {
+    from {transform: translateX(0) rotate(-3deg);}
+    50% {transform: translateX(-45vmin) rotate(-3deg);}
+    to {transform: translateX(0) rotate(-3deg);}
+}
+
+@keyframes right1 {
+    from {transform: translateX(0) rotate(-3deg);}
+    50% {transform: translateX(45vmin) rotate(-3deg);}
+    to {transform: translateX(0) rotate(-3deg);}
+}
+
+@keyframes left2 {
+    from {transform: translateX(0) rotate(3deg);}
+    50% {transform: translateX(-45vmin) rotate(3deg);}
+    to {transform: translateX(0) rotate(3deg);}
+}
+
+@keyframes right2 {
+    from {transform: translateX(0) rotate(3deg);}
+    50% {transform: translateX(45vmin) rotate(3deg);}
+    to {transform: translateX(0) rotate(3deg);}
+}
+
+.sale hgroup {
+    background-color: #f0f0f0;
+    width: 80vmin;
+    height: 80vmin;
+    box-shadow: 0px 3px 10px 1px #777;
+    position: absolute;
+    z-index: 70;
+    left: 2vmin;
+    top: 110vmin;
+}
+
+.sale hgroup > div {
+    margin: 0px 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    position: relative;
+    height: 100%;
+}
+
+.sale hgroup h2 {
+    color: #000;
+    word-break: keep-all;
+    width: 175px;
+    background: linear-gradient(transparent 30%,#e1cc0e 30%,#e1cc0e 80%,transparent 80%);
+}
+
+.sale .priceDiv {
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    width: 70vmin;
+    height: 70vmin;
+    box-shadow: 0px 3px 10px 1px #777;
+    z-index: 68;
+    position: absolute;
+    top: 175vmin;
+    right: -10px;
+}
+
+.saleList {
+    padding-inline: 30px;
+    width: 100%;
+}
+
+.saleList li {
+    display: grid;
+    grid-template-columns: [start] 10ex [left] auto [right] 4ex [end];
+}
+
+.saleList li p {
+    margin: 3px 0px;
+}
+
+.saleList div {
+    border-bottom: dotted 1px #000;
+    position: relative;
+    bottom: 16px;
+}
+
+.price {
+    grid-column: right / end;
+    text-align: end;
+    background: linear-gradient(transparent 40%,#e1cc0e 40%,#e1cc0e 80%,transparent 80%);
+}
+
+.inMain {
+    color: black;
+    font-size: 22px;
+    word-break: keep-all;
+    text-align: center;
+}
+
+.txt1 {
+    margin: 10px min(18vh,18vw);
+    word-break: keep-all;
+    text-align: center;
+}
+
+.txt2 {
+    margin: 10px min(18vh,18vw);
+    word-break: keep-all;
+    text-align: center;
+}
+
+footer {
+    background-color: #202020;
+    border-radius: 30px 30px 0px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+footer nav {
+    margin: 30px 30px 10px;
+}
+
+footer nav > p {
+    border-bottom: #ddd 1px solid;
+}
+
+footer nav ul {
+    padding-inline-start: 0px;
+}
+
+footer nav h3 {
+    color: #ddd;
+    margin: 0px;
+    font-family: "league";
+    font-size: 30px;
+}
+
+footer nav p {
+    color: #ddd;
+    margin: 0px;
+}
+
+footer nav li {
+    color: #ddd;
+    font-family: "light";
+    margin: 12px 0px;
+    position: relative;
+    font-size: 11px;
+}
+
+nav li ul {
+    overflow-y: hidden;
+    height: 0px;
+    opacity: 0;
+    transition-duration: 0.3s;
+}
+
+.plus1 {
+    position: absolute;
+    border-bottom: #ddd 2px solid;
+    width: 20px;
+    right: 20px;
+    top: 35px;
+    transition-duration: 0.3s;
+}
+
+.plus2 {
+    position: absolute;
+    border-bottom: #ddd 2px solid;
+    width: 20px;
+    transform: rotate(90deg);
+    right: 20px;
+    top: 35px;
+    transition-duration: 0.3s;
+}
+
+.actplus1 .plus2 {
+    transform: rotate(0deg);
+}
+
+.actplus2 .plus2 {
+    transform: rotate(0deg);
+}
+
+.actplus1 ul {
+    height: 200px;
+    opacity: 1;
+    transition-duration: 0.3s;
+}
+
+.actplus2 ul {
+    height: 150px;
+    opacity: 1;
+    transition-duration: 0.3s;
+}
+
+.arrow {
+    position: absolute;
+    right: 21px;
+    bottom: 13px;
+}
+
+.xIcon {
+    margin: 0px 30px;
+}
+
+.endTitle {
+    position: absolute;
+    margin: 0px 20px;
+    text-align: right;
+    word-break: keep-all;
+    bottom: 0px;
+    right: 10px;
+}
