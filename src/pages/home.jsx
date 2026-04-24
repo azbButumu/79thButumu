@@ -2,18 +2,10 @@ import './home.css'
 import { useEffect, useRef, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { ROUTES } from "../assets/const"
-import { AiOutlineX } from "react-icons/ai";
 import { TfiArrowTopRight } from "react-icons/tfi";
 import { motion, useInView } from "motion/react"
-import test1 from './image/test1.jpg'
-import test2 from './image/test2.jpg'
-import test3 from './image/test3.jpg'
-import test4 from './image/test4.jpg'
-import test5 from './image/test5.jpg'
 import butudai from './image/butudai.jpg'
 import testClass from './image/test_class.jpg'
-import camera from './image/677.png'
-import mirror from './image/mirror.jpg'
 import m1game from './image/m1game.jpg'
 import quest2 from './image/quest2.jpg'
 import Testimage from './image/tenji.jpg'
@@ -123,7 +115,7 @@ function Home() {
                                     </div>
                                 </li>
                                 <li>
-                                    <img src={mirror}/>
+                                    <img src={Testimage}/>
                                     <div>
                                         <h3>03</h3>
                                         <p>インフィニティミラー</p>

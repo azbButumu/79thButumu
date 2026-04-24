@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import './tenji_buturi.css'
-import Template from './TenjiObject/template'
-import { useSearchParams } from 'react-router-dom';
+import Template from './tool/template'
 import './TenjiObject/butudai'
 import { CAR, CPU, FLY, LED, PAINT, ROBOT, TESLA } from './TenjiObject/butudai';
 import Footer from '../footer';
@@ -48,18 +47,6 @@ export default function Tenji(){
         setrobot(!robot);
     }
 
-    const [fctenji, setfctenji] = useState(0);
-
-    const [tenjiNum] = useSearchParams();
-
-    useEffect (() => {
-        const slNum = tenjiNum.get("tenjiNum");
-
-        if (slNum !== null) {
-            setfctenji(Number(slNum));
-        }
-    }, [tenjiNum])
-
     return (
       <>
         <div className = "room1">
@@ -87,66 +74,52 @@ export default function Tenji(){
                 </div>
                 <Template
                 visible = {analog || all}
-                sltenji = {fctenji === 1}
-                tag = {TESLA.TAG}
                 title = {TESLA.TITLE}
                 image = {TESLA.IMAGE}
-                txt = {TESLA.TXT}
                 pageId = {TESLA.LIKE}
+                jump = {TESLA.JUMP}
                 />
                 <Template
                 visible = {digital || all}
-                sltenji = {fctenji === 2}
-                tag = {LED.TAG}
                 title = {LED.TITLE}
                 image = {LED.IMAGE}
-                txt = {LED.TXT}
                 pageId = {LED.LIKE}
+                jump = {LED.JUMP}
                 />
                 <Template
                 visible = {digital || all}
-                sltenji = {fctenji === 3}
-                tag = {CPU.TAG}
                 title = {CPU.TITLE}
                 image = {CPU.IMAGE}
-                txt = {CPU.TXT}
                 pageId = {CPU.LIKE}
+                jump = {CPU.JUMP}
                 />
                 <Template
                 visible = {robot || all}
-                sltenji = {fctenji === 4}
-                tag = {FLY.TAG}
                 title = {FLY.TITLE}
                 image = {FLY.IMAGE}
-                txt = {FLY.TXT}
                 pageId = {FLY.LIKE}
+                jump = {FLY.JUMP}
                 />
                 <Template
                 visible = {robot || all}
-                sltenji = {fctenji === 5}
-                tag = {ROBOT.TAG}
                 title = {ROBOT.TITLE}
                 image = {ROBOT.IMAGE}
-                txt = {ROBOT.TXT}
                 pageId = {ROBOT.LIKE}
+                jump = {ROBOT.JUMP}
                 />
                 <Template
                 visible = {robot || all}
-                sltenji = {fctenji === 6}
-                tag = {PAINT.TAG}
                 title = {PAINT.TITLE}
                 image = {PAINT.IMAGE}
-                txt = {PAINT.TXT}
                 pageId = {PAINT.LIKE}
+                jump = {PAINT.JUMP}
                 />
                 <Template
                 visible = {robot || all}
-                sltenji = {fctenji === 7}
-                tag = {CAR.TAG}
                 title = {CAR.TITLE}
                 image = {CAR.IMAGE}
-                txt = {CAR.TXT}
                 pageId = {CAR.LIKE}
+                jump = {CAR.JUMP}
                 />
             </nav>
         </div>

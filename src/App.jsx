@@ -9,6 +9,7 @@ import Katudou from './pages/katudou'
 import Class from './pages/tenji_class'
 import ScrollToTop from './scroll'
 import Footer from './footer'
+import SelectProduct from './pages/selectProduct'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
           <Route path={ROUTES.CLASS} element={<Class/>} />
           <Route path={ROUTES.BUTUMU} element={<Butumu />} />
           <Route path={ROUTES.KATUDOU} element={<Katudou />} />
+          <Route path={ROUTES.PRODUCT} element={<SelectProduct/>} />
         </Routes>
       </HashRouter>
     </>

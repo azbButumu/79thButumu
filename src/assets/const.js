@@ -4,4 +4,5 @@ export const ROUTES = {
     BUTURI: "/Room350",
     BUTUMU: "/butumu",
     KATUDOU: "/katsudou",
+    PRODUCT: "/product/:productId"
 }
