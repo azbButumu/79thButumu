@@ -2,6 +2,8 @@ import { AiOutlineX } from "react-icons/ai"
 import { TfiArrowTopRight } from "react-icons/tfi"
 import './footer.css'
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
+import { ROUTES } from "./assets/const"
 
 export default function Footer() {
 
@@ -21,6 +23,21 @@ export default function Footer() {
         window.location.href = "https://x.com/butumubutumu";
     }
 
+    const navigation = useNavigate();
+
+    const about = () => {
+        navigation(ROUTES.BUTUMU);
+    }
+    
+    const activity = () => {
+        navigation(ROUTES.KATUDOU);
+    }
+
+    const tesla = (num) => {
+        const path = ROUTES.PRODUCT.replace(":productNum", num)
+        navigation(path)
+    }
+
   return (
     <div>
       <footer>
@@ -31,14 +48,14 @@ export default function Footer() {
                         <h3>Room 350</h3>
                         <p>(350教室)</p>
                         <ul>
-                            <li>(テスラコイル)</li>
-                            <li>(LEDキューブ)</li>
-                            <li>(自作CPU)</li>
-                            <li>(ドローン)</li>
-                            <li>(蒸気機関)</li>
-                            <li>(お絵かきロボット)</li>
-                            <li>(トランスフォーマー)</li>
-                            <li>(チカチカ)</li>
+                            <li onClick={() => tesla(1)}>(テスラコイル)</li>
+                            <li onClick={() => tesla(2)}>(LEDキューブ)</li>
+                            <li onClick={() => tesla(3)}>(自作CPU)</li>
+                            <li onClick={() => tesla(4)}>(ドローン)</li>
+                            <li onClick={() => tesla(5)}>(四脚ロボ)</li>
+                            <li onClick={() => tesla(6)}>(お絵かきロボット)</li>
+                            <li onClick={() => tesla(7)}>(トランスフォーマー)</li>
+                            <li onClick={() => tesla(13)}>(チカチカ)</li>
                         </ul>
                         <div>
                             <div className = "plus1"/>
@@ -49,23 +66,23 @@ export default function Footer() {
                         <h3>Room 333</h3>
                         <p>(333教室)</p>
                         <ul>
-                            <li>(VRゲーム)</li>
-                            <li>(音ゲー)</li>
-                            <li>(イライラ棒)</li>
-                            <li>(自作ゲーム)</li>
-                            <li>(エアホッケー)</li>
+                            <li onClick={() => tesla(8)}>(VRゲーム)</li>
+                            <li onClick={() => tesla(9)}>(音ゲー)</li>
+                            <li onClick={() => tesla(10)}>(イライラ棒)</li>
+                            <li onClick={() => tesla(11)}>(自作ゲーム)</li>
+                            <li onClick={() => tesla(12)}>(エアホッケー)</li>
                         </ul>
                         <div>
                             <div className = "plus1"/>
                             <div className = "plus2"/>
                         </div>
                     </li>
-                    <li>
+                    <li onClick={about}>
                         <h3>About</h3>
                         <p>(物理部展とは)</p>
                         <TfiArrowTopRight size={25} className = "arrow"/>
                     </li>
-                    <li>
+                    <li onClick={activity}>
                         <h3>Activity</h3>
                         <p>(活動)</p>
                         <TfiArrowTopRight size={25} className = "arrow"/>

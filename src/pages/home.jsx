@@ -26,8 +26,11 @@ function Home() {
 
     const [selectImg,setSelectImg] = useState(0);
 
+    const [first, setFirst] = useState(0);
+
     const tapImg = () => {
         setSelectImg(prev => (prev + 1))
+        setFirst(prev => (prev + 1))
     }
 
     const classroom = () => {
@@ -62,28 +65,24 @@ function Home() {
         setbuy(prev => !prev);
     }
 
-    const ref = useRef(null)
-
-    const isInView = useInView(ref)
-
     return (
         <>
-            <div className = "image"> 
+            <div className = "image" id = {first == 0 ? "off" : "on"}> 
                 {/* アニメーションは任せた */}
                 <ul className = "imgStack" onClick={tapImg}>
-                    <li id = "img1" className = {`img${4 - (selectImg + 3) % 4}`}>
+                    <li className = {`img${4 - (selectImg + 3) % 4}`}>
                         <img src = {Testimage}/>
                         <h4>(作者など)1</h4>
                     </li>
-                    <li id = "img2" className = {`img${4 - (selectImg + 2) % 4}`}>
+                    <li  className = {`img${4 - (selectImg + 2) % 4}`}>
                         <img src = {Testimage}/>
                         <h4>(作者など)2</h4>
                     </li>
-                    <li id = "img3" className = {`img${4 - (selectImg + 1) % 4}`}>
+                    <li className = {`img${4 - (selectImg + 1) % 4}`}>
                         <img src = {Testimage}/>
                         <h4>(作者など)3</h4>
                     </li>
-                    <li id = "img4" className = {`img${4 - (selectImg + 0) % 4}`}>
+                    <li className = {`img${4 - (selectImg + 0) % 4}`}>
                         <img src = {Testimage}/>
                         <h4>(作者など)4</h4>
                     </li>
@@ -138,7 +137,6 @@ function Home() {
                     <nav>
                         <hgroup>
                             <h2 >Exhibition</h2>
-                            <div className ={isInView ? "highlight" : ""}/>
                         </hgroup>
                         <motion.img
                         initial={{opacity: 0}}
@@ -155,8 +153,12 @@ function Home() {
                         className = "block"
                         onClick={jikken}>
                             <img src={butudai} className = "butudai"/>
-                            <h2 className = "class1"><span>350</span>教室</h2>
-                            <div><p className = "tapToGo" id = "cls1button">TAP TO VISIT <TfiArrowTopRight size={13} className = "jump1"/></p></div>
+                            <div>
+                                <h2 className = "class1"><span>350</span>教室</h2>
+                                <div>
+                                    <p className = "tapToGo" id = "cls1button">TAP TO VISIT <TfiArrowTopRight size={13} className = "jump1"/></p>
+                                </div>
+                            </div>
                             <p className = "txt3">ドローン、トランスフォーマー、自作CPUなど演示展示が多くある教室です。電子工作体験やクイズなど実際に体験していただける展示なども設置しています。</p>
                         </motion.div>
                         <motion.img
@@ -174,8 +176,12 @@ function Home() {
                         className = "block"
                         onClick={classroom}>
                             <img src={testClass} className = "class"/>
-                            <h2 className = "class2"><span>333</span>教室</h2>
-                            <div><p className = "tapToGo" id = "cls2button">TAP TO VISIT <TfiArrowTopRight size={13} className = "jump1"/></p></div>
+                            <div>
+                                <h2 className = "class2"><span>333</span>教室</h2>
+                                <div>
+                                    <p className = "tapToGo" id = "cls2button">TAP TO VISIT <TfiArrowTopRight size={13} className = "jump1"/></p>
+                                </div>
+                            </div>
                             <p className = "txt4">VR、アーケードゲーム、イライラ棒など体験展示が多くある教室です。</p>
                         </motion.div>
                     </nav>

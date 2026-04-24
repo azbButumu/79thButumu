@@ -11,8 +11,8 @@ export default function Template({visible,title,image,pageId,jump}) {
 
     const navigation = useNavigate();
 
-    const jump = () => {
-        const path = ROUTES.PRODUCT.replace("productId", jump)
+    const link = () => {
+        const path = ROUTES.PRODUCT.replace(":productNum", jump)
         navigation(path)
     }
 
@@ -29,8 +29,8 @@ export default function Template({visible,title,image,pageId,jump}) {
                         <h2>{title}</h2>
                         <LikeButton pageId={pageId}/>
                     </div>
-                    <div className = "jump">
-                        <p>作品ページ<TfiArrowTopRight size={18} className = "arr" onClick={jump}/></p>
+                    <div className = "jump" onClick={link}>
+                        <p>作品ページ<TfiArrowTopRight size={18} className = "arr"/></p>
                     </div>
                 </hgroup>
             </main>

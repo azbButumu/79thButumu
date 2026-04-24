@@ -72,9 +72,12 @@ body {
     position: absolute;
     top: 9vh;
     right: 9vw;
-    animation: topImg 1s ease 0s;
     transition-delay: 0.5s;
     transition-property: z-index;
+}
+
+#on .img4 {
+    animation: topImg 1s ease 0s;
 }
 
 .imgStack h4 {
@@ -198,8 +201,6 @@ aside .proTxt {
 .block {
     width: 80vmin;
     padding: 3vmin;
-    display: flex;
-    flex-wrap: wrap;
     background-color: #f0f0f0;
     box-shadow: 0px 3px 10px 1px #777;
 }
@@ -210,13 +211,17 @@ aside .proTxt {
     object-fit: cover;
 }
 
+.block > div {
+    display: flex;
+}
+
 .MainFlex .block h2 {
     color: #000;
     margin: 10px 0px;
     flex-grow: 10000;
 }
 
-.block div {
+.block > div > div {
     transform: translateY(40px);
 }
 
@@ -235,6 +240,10 @@ aside .proTxt {
     color: #e1cc0e;
     letter-spacing: 1px;
     -webkit-text-stroke: 0.8px #000;
+}
+
+.block > p {
+    margin: 0px 0px 10px;
 }
 
 .sale {

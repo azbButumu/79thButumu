@@ -6,7 +6,7 @@ export default function SelectProduct() {
 
     const {productNum} = useParams();
 
-    const productData = PRODUCT[productNum]
+    const productData = PRODUCT[Number(productNum)]
 
   return (
     <>

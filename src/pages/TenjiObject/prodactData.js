@@ -111,7 +111,7 @@ export const PRODUCT = {
     },
 
     13: {
-        TITLE: TIKA,
+        TITLE: TIKA.TITLE,
         MAIN: TIKA.MAIN,
         IMG1: TIKA.IMAGE,
         IMG2: TIKA.IMG2,
