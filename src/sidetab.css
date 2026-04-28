@@ -107,7 +107,7 @@ h1#title {
   transition-duration: 0.5s;
   z-index: 70;
   -webkit-text-stroke: 1px #000;
-  font-family: dela;
+  font-family: 'Dela Gothic One', sans-serif;
   letter-spacing: -10px;
 }
 

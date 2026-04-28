@@ -1,0 +1,85 @@
+.product h2 {
+    color: black;
+    font-family: gochic;
+    margin: 85px 30px 20px;
+    text-align: end;
+}
+
+.product .img {
+    position: relative;
+    top: 65px;
+    display: flex;
+    height: min(70vmin,300px);
+}
+
+.product img {
+    border-radius: 10px;
+    border: solid 1px black;
+    width: min(70vmin,300px);
+    height: min(70vmin,300px);
+    position: absolute;
+}
+
+.state1 {
+    right: -12vmin;
+    z-index: 1;
+    scale: 0.6;
+    filter: blur(2px) opacity(50%);
+    transition-duration: 0.3s;
+}
+
+.state2 {
+    right: 2vmin;
+    z-index: 2;
+    scale: 0.85;
+    filter: blur(1px) opacity(80%);
+    transition-duration: 0.3s;
+}
+
+.state3 {
+    right: 15vmin;
+    z-index: 3;
+    scale: 1;
+    filter: blur(0px) opacity(100%);
+    transition-duration: 0.3s;
+}
+
+.state4 {
+    right: 27vmin;
+    z-index: 2;
+    scale: 0.85;
+    filter: blur(1px) opacity(80%);
+    transition-duration: 0.3s;
+}
+
+.state5 {
+    right: 41vmin;
+    z-index: 1;
+    scale: 0.6;
+    filter: blur(2px) opacity(50%);
+    transition-duration: 0.3s;
+}
+
+.state {
+    position: absolute;
+    top: 65px;
+    width: 100vw;
+    display: flex;
+    height: min(70vmin,300px);
+}
+
+.stateup {
+    width: 50vw;
+    height: min(70vmin,300px);
+    z-index: 5;
+}
+
+.statedown {
+    width: 50vw;
+    height: min(70vmin,300px);
+    z-index: 5;
+}
+
+.product p {
+    margin: 20px 30px;
+}

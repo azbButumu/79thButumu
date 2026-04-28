@@ -17,28 +17,13 @@
 }
 
 @font-face {
-  font-family: meityou;
-  src: url('/src/assets/ShipporiMincho-Regular.ttf');
-}
-
-@font-face {
-  font-family: light;
-  src: url('/src/assets/IBMPlexSansJP-Light.ttf');
-}
-
-@font-face {
-  font-family: dela;
-  src: url('/src/assets/DelaGothicOne-Regular.ttf');
-}
-
-@font-face {
   font-family: league;
   src: url('/src/assets/LeagueGothic-Regular-VariableFont_wdth.ttf');
 }
 
 @font-face {
   font-family: gochic;
-  src: url('/src/assets//ShipporiGochicB2-Bold.ttf');
+  src: url('/src/assets/ShipporiGochicB2-Bold-subset.woff2') format('woff2');
 }
 
 h1 {
@@ -50,7 +35,7 @@ h2 {
   font-size: 24px;
   color: #fff;
   font-weight: 100;
-  font-family: meityou;
+  font-family: Shippori Mincho;
   margin: 30px 0px;
 }
 
@@ -59,7 +44,7 @@ p {
   font-size: 11px;
   white-space: pre-wrap;
   line-height: 2.3;
-  font-family: light;
+  font-family: IBM Plex Sans JP;
 }
 
 li {
