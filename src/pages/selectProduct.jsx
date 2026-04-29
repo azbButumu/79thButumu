@@ -17,6 +17,7 @@ export default function SelectProduct() {
         img2={productData.IMG2}
         img3={productData.IMG3}
         like={productData.LIKE}
+        num={productNum}
         />
     </>
   )

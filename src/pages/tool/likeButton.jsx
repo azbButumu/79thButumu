@@ -68,7 +68,7 @@ export default function LikeButton({ pageId }) {
         <FontAwesomeIcon
           icon={faHeart}
           className="fa-heart"
-          style={{ color: liked ? "red" : "#f0f0f0" }}
+          style={{ color: liked ? "red" : "#777" }}
         />
       </div>
     </div>

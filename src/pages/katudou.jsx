@@ -1,4 +1,3 @@
-import React from 'react'
 import './katudou.css'
 
 export default function Katudou() {

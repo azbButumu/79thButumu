@@ -9,6 +9,7 @@ export const PRODUCT = {
         IMG2: TESLA.IMG2,
         IMG3: TESLA.IMG3,
         LIKE: TESLA.LIKE,
+        JUMP: TESLA.JUMP,
     },
 
     2: {
@@ -18,6 +19,7 @@ export const PRODUCT = {
         IMG2: LED.IMG2,
         IMG3: LED.IMG3,
         LIKE: LED.LIKE,
+        JUMP: LED.JUMP,
     },
 
     3: {
@@ -27,6 +29,7 @@ export const PRODUCT = {
         IMG2: CPU.IMG2,
         IMG3: CPU.IMG3,
         LIKE: CPU.LIKE,
+        JUMP: CPU.JUMP,
     },
 
     4: {
@@ -36,6 +39,7 @@ export const PRODUCT = {
         IMG2: FLY.IMG2,
         IMG3: FLY.IMG3,
         LIKE: FLY.LIKE,
+        JUMP: FLY.JUMP,
     },
 
     5: {
@@ -45,6 +49,7 @@ export const PRODUCT = {
         IMG2: ROBOT.IMG2,
         IMG3: ROBOT.IMG3,
         LIKE: ROBOT.LIKE,
+        JUMP: ROBOT.JUMP,
     },
 
     6: {
@@ -54,6 +59,7 @@ export const PRODUCT = {
         IMG2: PAINT.IMG2,
         IMG3: PAINT.IMG3,
         LIKE: PAINT.LIKE,
+        JUMP: PAINT.JUMP,
     },
 
     7: {
@@ -63,6 +69,7 @@ export const PRODUCT = {
         IMG2: CAR.IMG2,
         IMG3: CAR.IMG3,
         LIKE: CAR.LIKE,
+        JUMP: CAR.JUMP,
     },
 
     8: {
@@ -72,6 +79,7 @@ export const PRODUCT = {
         IMG2: VR.IMG2,
         IMG3: VR.IMG3,
         LIKE: VR.LIKE,
+        JUMP: VR.JUMP,
     },
 
     9: {
@@ -81,6 +89,7 @@ export const PRODUCT = {
         IMG2: SOUND.IMG2,
         IMG3: SOUND.IMG3,
         LIKE: SOUND.LIKE,
+        JUMP: SOUND.JUMP,
     },
 
     10: {
@@ -90,6 +99,7 @@ export const PRODUCT = {
         IMG2: IRAIRA.IMG2,
         IMG3: IRAIRA.IMG3,
         LIKE: IRAIRA.LIKE,
+        JUMP: IRAIRA.JUMP,
     },
 
     11: {
@@ -99,6 +109,7 @@ export const PRODUCT = {
         IMG2: M1.IMG2,
         IMG3: M1.IMG3,
         LIKE: M1.LIKE,
+        JUMP: M1.JUMP,
     },
 
     12: {
@@ -108,6 +119,7 @@ export const PRODUCT = {
         IMG2: AIR.IMG2,
         IMG3: AIR.IMG3,
         LIKE: AIR.LIKE,
+        JUMP: AIR.JUMP,
     },
 
     13: {
@@ -117,5 +129,6 @@ export const PRODUCT = {
         IMG2: TIKA.IMG2,
         IMG3: TIKA.IMG3,
         LIKE: TIKA.LIKE,
+        JUMP: TIKA.JUMP,
     }
 }
